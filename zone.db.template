@@ -1,0 +1,13 @@
+$ORIGIN {{DOMAIN}}.
+@       3600 IN SOA ns1.{{DOMAIN}}. admin.{{DOMAIN}}. (
+                                {{SERIAL}} ; serial
+                                7200       ; refresh
+                                1800       ; retry
+                                864000     ; expire
+                                60         ; minimum
+                                )
+        3600 IN NS  ns1.{{DOMAIN}}.
+
+ns1     3600 IN A   {{IP}}
+@       3600 IN A   {{IP}}
+test    3600 IN A   {{IP}}

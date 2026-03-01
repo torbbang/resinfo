@@ -1,0 +1,6 @@
+resinfo.net {
+    file /app/zone.db
+    resinfo
+    log
+    errors
+}

@@ -1,0 +1,5 @@
+.git
+/coredns
+/coredns_*
+.idea/
+.vscode/
