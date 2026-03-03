@@ -2,13 +2,14 @@
 
 DOMAIN=${DOMAIN:-resinfo.net}
 IP=${IP:-127.0.0.1}
+DEST_IP=${DEST_IP:-$IP}
 ACME_EMAIL=${ACME_EMAIL:-admin@${DOMAIN}}
 SERIAL=$(date +%Y%m%d%H)
 export DOMAIN ACME_EMAIL
 
-echo "[entrypoint] Configuring for Domain: $DOMAIN, IP: $IP${IPV6:+, IPv6: $IPV6}"
+echo "[entrypoint] Configuring for Domain: $DOMAIN, IP: $IP${DEST_IP:+, Dest: $DEST_IP}${IPV6:+, IPv6: $IPV6}"
 
-sed "s/{{DOMAIN}}/$DOMAIN/g; s/{{IP}}/$IP/g; s/{{SERIAL}}/$SERIAL/g" /app/zone.db.template > /app/zone.db
+sed "s/{{DOMAIN}}/$DOMAIN/g; s/{{IP}}/$IP/g; s/{{DEST_IP}}/$DEST_IP/g; s/{{SERIAL}}/$SERIAL/g" /app/zone.db.template > /app/zone.db
 
 if [ -n "$IPV6" ]; then
     printf "ns1\t3600 IN AAAA\t%s\n@\t3600 IN AAAA\t%s\n" \

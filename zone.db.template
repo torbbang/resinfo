@@ -9,5 +9,5 @@ $ORIGIN {{DOMAIN}}.
         3600 IN NS  ns1.{{DOMAIN}}.
 
 ns1     3600 IN A   {{IP}}
-@       3600 IN A   {{IP}}
+@       3600 IN A   {{DEST_IP}}
 test    3600 IN A   {{IP}}
