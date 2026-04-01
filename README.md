@@ -1,3 +1,9 @@
+> [!IMPORTANT]
+> ## 🚚 This project has moved to [git.torbjorn.dev](https://git.torbjorn.dev/torbbang/resinfo)
+> This GitHub repository is archived and no longer maintained.
+
+---
+
 # ResInfo
 
 ResInfo is a custom [CoreDNS](https://coredns.io/) plugin that acts as a passive diagnostic tool for DNS resolvers. By querying it, you receive a real-time capability report of your last-hop resolver, detailing its privacy bounds (ECS, QNAME minimization) and security posture (DNSSEC flags).
